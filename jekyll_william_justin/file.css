@@ -1,0 +1,110 @@
+html{
+  height:100%;
+}
+
+body{
+ height:100%;
+}
+
+
+.landing-page{
+ height:100%;
+ background-size:cover;
+ background-color:#0562dc;
+ background-position:center;
+  
+ display:block;
+ box-sizing:border-box;
+  
+ text-align:center;
+ font-family: 'Roboto', sans-serif;
+ 
+}
+
+
+.mask{
+  width:50%;
+  margin: 0 auto ; 
+  height:100%;
+  border: 1px solid black; 
+}
+
+h1:first-child{
+  color:white;
+  font-size:4.75em;
+}
+
+h1:nth-child(2){
+  color:white;
+  font-size:1.75em;
+  margin-top:-50px;
+}
+
+.landing-page i{
+  box-sizing:border-box;
+  font-size:1.6em;
+  border-radius:50%;
+  border: 1px solid white;
+  padding:15px 15px;
+  margin:10px 10px ; 
+  color:white;
+}
+
+.landing-page i:hover{
+  background-color:white;
+  color:#0562dc;
+}
+
+.landing-page a{
+  bottom:10px; 
+}
+
+.mask-2{
+  width:80%;
+  margin: 0 auto ; 
+  border: 1px solid black; 
+}
+
+.blog{
+  border: 1px solid blue;
+  display:flex;
+  flex-wrap:wrap;
+  flex-direction:row;
+  justify-content:space-around;
+}
+
+.blog-content{
+  padding: 1px 50px;
+}
+
+.left{
+  flex:1 1 auto;
+  text-align:center;
+  border:1px solid black;
+}
+
+.left h1{
+  color:#0562dc;
+}
+.left h3{
+  color: black; 
+}
+
+.right{
+  flex:1 1 80%;
+  text-align:center;
+  border: 1px solid black;
+}
+
+.right h1{
+  color:black;
+}
+.right p{
+  text-align:left;
+}
+
+.tags {
+  flex: 1 1 auto; 
+  text-align:left; 
+}
+
