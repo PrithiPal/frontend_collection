@@ -1,9 +1,11 @@
 html{
   height:100%;
+  width:100%;
 }
 
 body{
  height:100%;
+ width:100%; 
 }
 
 
@@ -19,14 +21,20 @@ body{
  text-align:center;
  font-family: 'Roboto', sans-serif;
  
+ 
 }
 
 
 .mask{
-  width:50%;
   margin: 0 auto ; 
-  height:100%;
+  
   border: 1px solid black; 
+  text-align:center;
+  position:absolute;
+  top:20%;
+  bottom:20%;
+  left:20%;
+  right:20%;
 }
 
 h1:first-child{
@@ -71,6 +79,7 @@ h1:nth-child(2){
   flex-wrap:wrap;
   flex-direction:row;
   justify-content:space-around;
+  margin: 10px auto ;
 }
 
 .blog-content{
@@ -85,9 +94,12 @@ h1:nth-child(2){
 
 .left h1{
   color:#0562dc;
+  font-family: 'Titillium Web', sans-serif;
 }
 .left h3{
   color: black; 
+  font-family: 'Titillium Web', sans-serif;
+  font-weight:bold;
 }
 
 .right{
@@ -98,9 +110,15 @@ h1:nth-child(2){
 
 .right h1{
   color:black;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight:800;
+  border:1px solid gray;
 }
 .right p{
   text-align:left;
+  font-family: 'Titillium Web', sans-serif;
+  border:1px solid gray;
+  margin-top:-20px;
 }
 
 .tags {
@@ -108,3 +126,63 @@ h1:nth-child(2){
   text-align:left; 
 }
 
+.tags a{
+  font-size:1.2em;
+  text-decoration:none;
+  color:#0562dc;
+  border-radius:5px;
+  border: 1px solid #0562dc;
+  padding: 2px 8px;
+  
+}
+.content-arrow {
+  position: absolute;
+  
+  left:50%;
+  bottom:10%;
+	transform: translate(-50%, -50%);
+  
+  p {
+    margin: 0 0 20px;
+  }
+  
+}
+
+
+#more-arrows {
+	width: 75px;
+  height: 65px;
+  
+  &:hover {
+    
+    polygon {
+      fill: #FFF;
+      transition: all .2s ease-out;
+
+      &.arrow-bottom {
+        transform: translateY(-18px);
+      }
+
+      &.arrow-top {
+        transform: translateY(18px);
+      }
+      
+    }
+  
+  }
+  
+}
+
+polygon {
+  fill: #FFF;
+  transition: all .2s ease-out;
+    
+  &.arrow-middle {
+	  opacity: 0.75;
+	}
+
+	&.arrow-top {
+	  opacity: 0.5
+	}
+	 
+}
