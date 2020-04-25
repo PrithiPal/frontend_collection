@@ -1,0 +1,59 @@
+body{
+
+  margin:0;
+  padding:0;
+  height:100%;
+  width:100%;
+
+}
+.section-landing-page{
+  display:flex;
+  flex-direction:row;
+  justify-content:start;
+  height:100%;
+  border:1px solid blue;
+}
+
+.left-sidebar{
+  width:30%;
+  
+  border: 1px solid black;
+}
+
+.left-sidebar h1{
+
+}
+
+.left-sidebar p{
+
+}
+
+.left-sidebar i {
+  font-size:2.5rem;
+  margin:0 1rem;
+}
+
+.main{
+  width:70%;
+  
+  border: 1px solid black;
+
+}
+
+.content-wrapper{
+  width: 80%; 
+  margin:0 auto;
+  border:1px solid red;
+  text-align:center;
+}
+
+.section-skills{
+  border:1px solid blue;
+}
+
+.section-projects{
+  border:1px solid blue;
+}
+
+
+
