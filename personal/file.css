@@ -1,14 +1,15 @@
 body{
   width:100%;
-  height:100%;
-  margin:0;
-  padding:0;
   
+
 }
 .page-wrapper{
-  margin:0 auto;
+  
   width:85%;
-  height:100%;
+  margin:0 auto;
+ 
+  height:80%;
+  
   border:1px solid black;
   display:flex;
   justify-content:space-around;
@@ -33,15 +34,44 @@ body{
   display:flex;
   justify-content:center;
   align-items:center;
-  background-color:red;
+  
 }
 
 .leftside-wrapper{
-  
+  width:80%;
   margin:0 auto;
   padding: 60px 0 ;
   border:1px solid blue;
 }
+
+.page-links{
+  font-size:2rem;
+  border:1px solid blue;
+}
+
+.page-links a{
+  text-decoration:none;
+  margin:10px 20px ; 
+  font-family: 'Source Code Pro', monospace;
+}
+
+.social{
+  margin:20px 0;
+  border:1px solid blue;
+  display:flex;
+  bottom:20px;
+  flex;
+  
+}
+
+.social a{
+  font-size:2rem;
+  border:1px solid pink;
+  flex:1 1 0;
+}
+
+
+
 
 .rightside{
   border:1px solid red;
@@ -51,28 +81,37 @@ body{
   justify-content:center;
   align-items:center;
   text-align:center;
-  background-color:blue;
+ 
 }
 
 .rightside-wrapper{
   
   width:80%;
   margin:0 auto;
-
   border:1px solid blue;
   
 }
 
-.page-links{
-  
+.rightside-wrapper h1{
+  font-family: 'Roboto', sans-serif;
+  font-weight:700;
+  font-size:4rem;
 }
 
-.social{
+.rightside-wrapper h3{
+  font-family: 'Roboto', sans-serif;
+  margin-top:-20px;
+  font-size:2rem;
+}
 
+.rightside-wrapper p{
+  font-family: 'Source Code Pro', monospace;
 }
 
 .footer{
   border:1px solid black;
+  width:85%;
+  margin:0 auto;
 } 
 
 @media screen and (max-width:758px){
