@@ -1,3 +1,25 @@
+function LightenDarkenColor(col, amt) {
+// credits : https://css-tricks.com/snippets/javascript/lighten-darken-color/
+
+    var usePound = false;
+    if (col[0] == "#") {
+        col = col.slice(1);
+        usePound = true;
+    }
+    var num = parseInt(col,16);
+    var r = (num >> 16) + amt;
+    if (r > 255) r = 255;
+    else if  (r < 0) r = 0;
+    var b = ((num >> 8) & 0x00FF) + amt;
+    if (b > 255) b = 255;
+    else if  (b < 0) b = 0;
+    var g = (num & 0x0000FF) + amt;
+    if (g > 255) g = 255;
+    else if (g < 0) g = 0;
+    return (usePound?"#":"") + (g | (b << 8) | (r << 16)).toString(16);
+
+}
+
 var debug=0;
 
 if(debug==1){
@@ -14,7 +36,10 @@ if(debug==1){
     $(".rightside-wrapper").css(b,"1px solid blue");
     $(".footer").css(b,"1px solid black");
 
+
+
   });
+
 }
 
 $("document").ready(function(){
@@ -22,22 +47,40 @@ $("document").ready(function(){
   var dark = "#19409a";
   var light = "#80e2b0";
   var white = "white" ;
-  var bg = "#DCCDC2";
+  var bg = "#CF4D6F";
 
   $("body").css("background-color",bg);
 
   $(".leftside").css("background-color",dark);
+
   $(".page-links a:link").css("color",light);
   $(".page-links a:visited").css("color",light);
-  $(".page-links a:hover").css("color",light);
-  $(".page-links a:active").css("color",light);
+  $(".page-links a:hover").css("color",dark);
+  $(".page-links a:active").css("color",white);
+  $(".social a").css("color",light);
 
-  $(".social a").css("color",white);
+
+  $(".social a").hover(function(){
+    $(this).css("color",white);
+    $(this).css("border-bottom","1px solid ".concat(white));
+  },function(){
+    $(this).css("color",light);
+    $(this).css("border-bottom","");
+  }
+  );
+
+
 
   $(".rightside").css("background-color",light);
   $(".rightside-wrapper").css("color",dark);
 
   $(".footer").css("background-color",dark);
   $(".footer").css("color",white);
+
+  var a_link = $(".page-links a:link").css("color");
+  var a_visited = $(".page-links a:visited").css("color");
+  var a_hover = $(".page-links a:hover").css("color");
+  var a_active = $(".page-links a:active").css("color");
+
 
 });
