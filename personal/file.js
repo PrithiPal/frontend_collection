@@ -84,5 +84,4 @@ $("document").ready(function(){
   $(".footer").css("color",white);
 
 
-
 });

@@ -1,0 +1,100 @@
+body{
+  padding-top:30px;
+
+}
+
+.main-wrapper{
+  width:90%;
+  margin:0 auto;
+}
+
+.nav-container{
+
+  /* LAYOUT */
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  grid-template-areas:"projects . blogs . stats . . . . linkedin github mail";
+  grid-gaps:20px;
+  justify-contents:center;
+  align-items:center;
+
+  /* DESIGN */
+  background-color:#312b7b;
+
+}
+
+.projects{
+  grid-area:projects;
+}
+.blogs{
+  grid-area:blogs;
+}
+.stats{
+  grid-area:stats;
+}
+.linkedin{
+  grid-area:linkedin;
+}
+.github{
+  grid-area:github;
+}
+.mail{
+  grid-area:mail;
+}
+
+
+li{
+  text-align:center;
+  padding:15px 0 ;
+  list-style-type:none;
+/*   border:1px solid red; */
+}
+
+.link a{
+  /* LAYOUT */
+
+  /* COLOR */
+  text-decoration:none;
+  font-size:1.5rem;
+  font-family: 'Source Code Pro', monospace;
+/*   border:1px solid red; */
+  color:white;
+}
+
+.logo a{
+   /* LAYOUT */
+
+  /* COLOR */
+  font-size:2rem;
+/*   border:1px solid red; */
+  padding:5px 10px;
+  border-radius:20px;
+  color:white
+}
+
+.rightside-wrapper{
+
+  border: 1px solid black;
+
+}
+
+.page-topic{
+  border:1px solid black;
+  text-align:center;
+}
+
+.contents{
+  border:1px solid red;
+  margin-top:30px;
+  font-family: 'Source Code Pro', monospace;
+}
+
+@media screen and (max-width:758px){
+  .contents{
+    background-color:red;
+  }
+}
+
+@media screen and (max-height:500px){
+
+}
