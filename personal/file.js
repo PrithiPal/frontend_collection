@@ -36,8 +36,6 @@ if(debug==1){
     $(".rightside-wrapper").css(b,"1px solid blue");
     $(".footer").css(b,"1px solid black");
 
-
-
   });
 
 }
@@ -53,10 +51,19 @@ $("document").ready(function(){
 
   $(".leftside").css("background-color",dark);
 
-  $(".page-links a:link").css("color",light);
-  $(".page-links a:visited").css("color",light);
-  $(".page-links a:hover").css("color",dark);
-  $(".page-links a:active").css("color",white);
+  /* Page link */
+  $(".page-links a").css("color",light);
+
+  $(".page-links a").mouseup(function(){
+    $(this).css("color",light);
+  });
+
+  $(".page-links a").mousedown(function(){
+    $(this).css("color","white");
+  });
+
+
+  /* Social */
   $(".social a").css("color",light);
 
 
@@ -70,17 +77,12 @@ $("document").ready(function(){
   );
 
 
-
   $(".rightside").css("background-color",light);
   $(".rightside-wrapper").css("color",dark);
 
   $(".footer").css("background-color",dark);
   $(".footer").css("color",white);
 
-  var a_link = $(".page-links a:link").css("color");
-  var a_visited = $(".page-links a:visited").css("color");
-  var a_hover = $(".page-links a:hover").css("color");
-  var a_active = $(".page-links a:active").css("color");
 
 
 });

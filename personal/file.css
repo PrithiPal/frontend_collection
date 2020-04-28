@@ -1,17 +1,17 @@
 body{
   width:100%;
   height:100%;
+  background-color:black;
 }
 
 .main-wrapper{
-
+  width:80%;
+  margin: 0 auto;
 }
 
 .page-wrapper{
 
-  height:90vh;
-  border:1px solid black;
-
+  height:80vh;
 
   display:flex;
   justify-content:space-around;
@@ -20,20 +20,17 @@ body{
   flex-wrap:wrap;
   flex-dimension:row;
 
-
-
 }
 
 .leftside{
 
-  border:1px solid red;
+
   width:30%;
   flex: 3 1 0 ;
   text-align:center;
   display:flex;
   justify-content:center;
   align-items:center;
-
   background-color:#312b7b;
 
 }
@@ -42,16 +39,14 @@ body{
   width:80%;
   margin:0 auto;
   padding: 60px 0 ;
-  border:1px solid blue;
+
 }
 
 .page-links{
   font-size:2rem;
-  border:1px solid blue;
+
   text-align:left;
 
-  width:80%;
-  margin:0 auto;
   display:grid;
   grid-template-columns: 1fr ;
   grid-template-rows: repeat(1fr,3);
@@ -60,42 +55,32 @@ body{
 .page-links a{
   text-decoration:none;
   margin:5px 0 ;
-  padding-right:20px;
   font-family: 'Source Code Pro', monospace;
-  border:1px solid red;
-}
-
-.page-links a:link{
-  color:#4fbb44;
-}
-.page-links a:visited{
- color:#4fbb44;
-}
-.page-links a:hover{
-  color:#4fbb44;
-}
-.page-links a:active{
-  color:#4fbb44;
+  padding:5px 0;
 }
 
 .social{
-  margin:20px 0;
-  border:1px solid blue;
-  display:flex;
-  bottom:20px;
+  margin-top:60px;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-rows: 1fr;
 }
 
 .social a{
-  font-size:2rem;
-  border:1px solid pink;
-  flex:1 1 0;
+  font-size:3rem;
+  flex:0 1 0;
   color:white;
+  padding:5px 5px;
 }
 
 
+hr{
+  border:1px solid black;
+}
+
 
 .rightside{
-  border:1px solid red;
+
   flex: 7 1 0;
   display:flex;
   justify-content:center;
@@ -109,7 +94,6 @@ body{
 .rightside-wrapper{
   width:80%;
   margin:0 auto;
-  border:1px solid blue;
   color:#312b7b;
 }
 
@@ -130,13 +114,14 @@ body{
 }
 
 .footer{
-  border:1px solid black;
+
   width:80%;
-  margin:10px auto;
+  margin:30px auto;
   padding:10px 30px;
   font-family: 'Source Code Pro', monospace;
   background-color:#312b7b;
   color:white;
+
 }
 
 @media screen and (max-width:758px){
@@ -156,6 +141,11 @@ body{
   }
 
   .page-wrapper{
+    display:flex;
+    flex-wrap:wrap-reverse;
+  }
+
+  .page-wrapper{
     flex:1 1 auto;
     height:auto;
   }
@@ -165,9 +155,23 @@ body{
 
   }
 
+  .page-links{
+
+    text-align:center;
+  }
+
+  .social{
+    grid-template-columns:1fr 1fr 1fr;
+  }
+
+  .social a{
+    font-size:3em;
+    grid-column:2/3;
+  }
+
 }
 
-@media screen and (max-height:400px){
+@media screen and (max-height:500px){
   .rightside{
 
   }
