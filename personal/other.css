@@ -1,25 +1,29 @@
-body{
-  padding-top:30px;
+html{
+  min-width:500px;
+}
 
+body{
+/*   padding-top:30px; */
 }
 
 .main-wrapper{
-  width:90%;
+  width:100%;
   margin:0 auto;
+  background-color:#DAA520;
 }
 
+/*  NAVBAR SETTINGS  */
 .nav-container{
 
   /* LAYOUT */
+  padding:0 20px;
   display:grid;
-  grid-template-columns:repeat(12,1fr);
-  grid-template-areas:"projects . blogs . stats . . . . linkedin github mail";
-  grid-gaps:20px;
-  justify-contents:center;
-  align-items:center;
+  grid-template-columns:repeat(13,1fr);
+  grid-template-areas:"projects blogs stats . . . . . . . linkedin github mail";
+  grid-gap:15px;
 
   /* DESIGN */
-  background-color:#312b7b;
+  background-color:#19409a;
 
 }
 
@@ -44,8 +48,9 @@ body{
 
 
 li{
+  text-decoration:none;
   text-align:center;
-  padding:15px 0 ;
+  padding: 10px 0 ;
   list-style-type:none;
 /*   border:1px solid red; */
 }
@@ -58,7 +63,23 @@ li{
   font-size:1.5rem;
   font-family: 'Source Code Pro', monospace;
 /*   border:1px solid red; */
+  color:#80e2b0;
+}
+
+.link a:active{
   color:white;
+
+}
+
+.link a:hover{
+  color:white;
+  text-decoration:none;
+}
+
+
+.logo a:hover{
+  color:white;
+  border-bottom:1px solid white;
 }
 
 .logo a{
@@ -67,32 +88,131 @@ li{
   /* COLOR */
   font-size:2rem;
 /*   border:1px solid red; */
-  padding:5px 10px;
-  border-radius:20px;
-  color:white
+  color:white;
 }
 
+/* CONTENTS SETTINGS  */
 .rightside-wrapper{
 
   border: 1px solid black;
-
+  width:90%;
+  margin:0 auto;
 }
 
 .page-topic{
   border:1px solid black;
   text-align:center;
+  padding:20px 0;
+  color:#19409a;
+  background-color:#80e2b0;
+  font-variant:bold;
+}
+.page-topic h1{
+  font-family: 'Press Start 2P', cursive;
 }
 
+/* CONTENTS  */
 .contents{
   border:1px solid red;
   margin-top:30px;
   font-family: 'Source Code Pro', monospace;
 }
 
+/* NAVIGATION TABS  */
+
+.nav-pills{
+  text-align:center;
+  background-color:#19409a;
+/*   width:95%;
+  margin:0 auto; */
+/*   padding:10px 10px ;  */
+  display:flex;
+  flex-direction:row;
+  justify-contents:space-around;
+}
+
+.nav-link.active{
+  background-color:#19409a !important ;
+  color:white !important;
+  border:1px solid white;
+}
+
+.nav-item{
+  flex:1 1 100px ;
+  text-align:center;
+/*   border:1px solid red; */
+  margin:0 10px;
+}
+
+
+.nav-link{
+  color:white;
+  font-size:1.3em;
+}
+.nav-link:hover{
+  color:white;
+}
+
+/*  .nav-link:active{
+  color:red;
+  background-color:red;
+} */
+/*
+.nav-link:hover{
+  color:white;
+}
+/* .nav-link:link{
+  color:purple;
+} */
+.nav-link:visited{
+  color:black;
+} */
+
+/* NAVIGATION CONTENT SETTINGS */
+.tab-content{
+  background-color:black;
+/*   margin-top:50px; */
+}
+
+/* CARDS SETTINGS  */
+.card-header{
+  color:#19409a;
+}
+
+.card-body {
+  background-color:#19409a;
+  color:white;
+}
+
+.card-body .project-links a{
+  font-size:1.5rem;
+}
+
+/* RESPONSIVE */
+
 @media screen and (max-width:758px){
-  .contents{
-    background-color:red;
-  }
+    .contents{
+      background-color:red;
+    }
+
+    .nav-container{
+      grid-template-columns:repeat(6,1fr);
+      grid-template-rows:repeat(2,1fr);
+      grid-template-areas:"projects projects blogs blogs stats stats  "
+        "linkedin github mail . . . ";
+      grid-gap:10px;
+
+    }
+   .link{
+    align-self:end;
+   }
+  .logo{
+    align-self:start;
+   }
+
+
+
+
 }
 
 @media screen and (max-height:500px){

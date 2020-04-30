@@ -7,11 +7,14 @@ $("document").ready(function(){
 
 // BODY CSS
   $("body").css("background-color",light);
+// MAIN WRAPPER CSS
+  $(".main-wrapper").css("background-color",bg);
 
 // NAVBAR CSS
   $(".nav-container").css("background-color",dark);
 
   $(".link a").css("color",light);
+  $(".link a").css("text-decoration","none");
 
   $(".link a").mouseup(function(){
     $(this).css("color",light);
@@ -34,16 +37,66 @@ $("document").ready(function(){
   }
   );
 
+// PAGE TITLE
+  $(".page-topic").css("background-color",dark);
+  $(".page-topic").css("color",white);
+
 //   TAB
-  $(".nav-tabs").css("background-color",dark);
-  $(".nav-link").css("color",white);
-  $(".tab-content").css("background-color",white);
+   $(".nav-pills").css("background-color",dark);
+
+   $(".nav-link").css("color",white);
+   $(".nav-link").hover(function(){
+     $(this).css("color",white);
+   },function(){
+     $(this).css("color",white);
+   }
+     );
+
+// TAB NAVS
+
+    var navlink_active_color = white;
+    var navlink_active_border = "1px solid "+white ;
+    var navlink_active_bg = dark;
+
+    var navlink_notactive_color = dark;
+    var navlink_notactive_border = "";
+    var navlink_notactive_bg = dark;
+
+    $(".nav-link.active").css("background-color",navlink_active_bg);
+    $(".nav-link.active").css("border",navlink_active_border);
+
+    $('.nav-link').click(function(){
+      // not active CSS
+      $('.nav-link').removeClass('active');
+
+      $('.tab-content .tab-pane').removeClass('active');
+      $('.nav-link').css("background-color",navlink_notactive_bg);
+      $('.nav-link').css("border",navlink_notactive_border);
+
+      // active link CSS
+      $(this).addClass('active');
+      $(this).css("background-color",navlink_active_bg);
+      $(this).css("border",navlink_active_border);
+
+      var link_id=$(this).attr("href");
+      var l = link_id.substring(1,link_id.length);
+
+      // for debugging
+      // $("h1").html(l);
+      // $('.tab-content #' + l ).css("background-color","red");
+
+      $('.tab-content #' + l ).addClass('fade show active');
+
+    });
+
+  $(".tab-content").css("background-color","black");
 // CARD
   $(".card-header").css("color","black");
   $(".card-body").css("background-color",dark);
   $(".card-body").css("color",white);
 
 });
+
 
 $( window ).resize(function() {
   var screen_width = $(window).width();
