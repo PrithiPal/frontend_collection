@@ -93,6 +93,14 @@ $("document").ready(function(){
   $(".card-body").css("background-color",dark);
   $(".card-body").css("color",white);
 
+  $(".card-body a").css("color",white);
+  $(".card-body a").hover(function(){
+    $(this).css("color",light);
+
+  },function(){
+    $(this).css("color",white);
+  });
+
 });
 
 

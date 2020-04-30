@@ -131,11 +131,11 @@ li{
   justify-contents:space-around;
 }
 
-.nav-link.active{
+/* .nav-link.active{
   background-color:#19409a !important ;
   color:white !important;
   border:1px solid white;
-}
+} */
 
 .nav-item{
   flex:1 1 100px ;
@@ -149,24 +149,11 @@ li{
   color:white;
   font-size:1.3em;
 }
+
 .nav-link:hover{
   color:white;
 }
 
-/*  .nav-link:active{
-  color:red;
-  background-color:red;
-} */
-/*
-.nav-link:hover{
-  color:white;
-}
-/* .nav-link:link{
-  color:purple;
-} */
-.nav-link:visited{
-  color:black;
-} */
 
 /* NAVIGATION CONTENT SETTINGS */
 .tab-content{
@@ -184,8 +171,26 @@ li{
   color:white;
 }
 
-.card-body .project-links a{
-  font-size:1.5rem;
+.card-body .project-links{
+
+}
+
+.card-body .project-links span{
+  font-size:0.9rem;
+}
+
+.card-body  a{
+  font-size:3rem;
+  position:absolute;
+  bottom:-10px;
+  right:10px;
+  color:white;
+/*   padding:5px 10px; */
+/*   background-color:white; */
+}
+
+.card-body a:hover{
+  color:gray;
 }
 
 /* RESPONSIVE */
