@@ -5,14 +5,14 @@ $("document").ready(function(){
   var white = "white" ;
   var bg = "#CF4D6F";
 
-// BODY CSS
-  $("body").css("background-color",light);
+
 // MAIN WRAPPER CSS
-  $(".main-wrapper").css("background-color",bg);
+  $(".main-wrapper").css("background-color",light);
 
 // NAVBAR CSS
   $(".nav-container").css("background-color",dark);
 
+// NAVBAR LINKS
   $(".link a").css("color",light);
   $(".link a").css("text-decoration","none");
 
@@ -24,9 +24,8 @@ $("document").ready(function(){
     $(this).css("color",white);
   });
 
-  /* Social */
+// NAVBAR SOCIALS
   $(".logo a").css("color",light);
-
 
   $(".logo a").hover(function(){
     $(this).css("color",white);
@@ -38,32 +37,27 @@ $("document").ready(function(){
   );
 
 // PAGE TITLE
-  $(".page-topic").css("background-color",dark);
+  $(".page-topic").css("background-color",bg);
   $(".page-topic").css("color",white);
 
-//   TAB
-   $(".nav-pills").css("background-color",dark);
-
-   $(".nav-link").css("color",white);
-   $(".nav-link").hover(function(){
-     $(this).css("color",white);
-   },function(){
-     $(this).css("color",white);
-   }
-     );
-
-// TAB NAVS
+// TABS AND TAB-NAV
 
     var navlink_active_color = white;
     var navlink_active_border = "1px solid "+white ;
     var navlink_active_bg = dark;
 
-    var navlink_notactive_color = dark;
+    var navlink_notactive_color = white;
     var navlink_notactive_border = "";
     var navlink_notactive_bg = dark;
 
+
     $(".nav-link.active").css("background-color",navlink_active_bg);
     $(".nav-link.active").css("border",navlink_active_border);
+    $(".nav-link.active").css("color",navlink_active_color);
+
+    $(".nav-link").css("background-color",navlink_notactive_bg);
+    $(".nav-link").css("border",navlink_notactive_border);
+    $(".nav-link").css("color",navlink_notactive_color);
 
     $('.nav-link').click(function(){
       // not active CSS
@@ -72,11 +66,13 @@ $("document").ready(function(){
       $('.tab-content .tab-pane').removeClass('active');
       $('.nav-link').css("background-color",navlink_notactive_bg);
       $('.nav-link').css("border",navlink_notactive_border);
+      $('.nav-link').css("color",navlink_notactive_color);
 
       // active link CSS
       $(this).addClass('active');
       $(this).css("background-color",navlink_active_bg);
       $(this).css("border",navlink_active_border);
+      $(this).css("color",navlink_active_color);
 
       var link_id=$(this).attr("href");
       var l = link_id.substring(1,link_id.length);
@@ -89,8 +85,10 @@ $("document").ready(function(){
 
     });
 
-  $(".tab-content").css("background-color","black");
-// CARD
+  $(".tab-content").css("background-color",dark);
+
+
+// PROJECT CARDS
   $(".card-header").css("color","black");
   $(".card-body").css("background-color",dark);
   $(".card-body").css("color",white);
